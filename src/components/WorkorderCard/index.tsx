@@ -52,7 +52,7 @@ const WorkorderCart = (props: UserProps) => {
       <div className="rowTitleWorkorders">
         <div className="colTitle">
           <h3 className="titleBoxTask">#{props.id}</h3>
-          <h3 className="titleBoxTask removeMargin">{props.title} <span style={{ backgroundColor: "green", color: "white", padding: ".3rem", marginLeft: ".5rem" }} className={`${props.status === "completed" ? "" : "invisibleCompleted"}`} >{props.status === "completed" ? " (Completed) " : ""}</span></h3>
+          <h3 className="titleBoxTask removeMargin">{props.title} <span className={`${props.status === "completed" ? "visibleCompleted" : "invisibleCompleted"}`} >{props.status === "completed" ? "DONE" : ""}</span></h3>
         </div>
         <div className="colPriority">
           <div className="priorityBoxTask">

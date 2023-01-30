@@ -34,6 +34,7 @@
         @include mediaQueryMax(small) {
           margin-right: 1.5rem;
           margin-left: .5rem !important;
+          font-size: 17px;
         }
       }
     }
@@ -229,4 +230,17 @@
 .invisibleCompleted {
   visibility: hidden;
 
+}
+
+.visibleCompleted {
+  background-color: green;
+  color: white;
+  padding: .3rem;
+  margin-left: .5rem;
+  margin-right: .5rem;
+  font-size: 18px;
+
+  @include mediaQueryMax(small) {
+    font-size: 13px;
+  }
 }
