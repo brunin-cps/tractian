@@ -103,7 +103,7 @@ const AssetsCard = (props: UserProps) => {
       title: {
         text: 'Status'
       },
-      categories: ["", "Planned Stop", "Unplanned Stop", "In Alert", "In Downtime", "In Operation"],
+      categories: ["", "Unplanned Stop", "In Alert", "In Downtime", "Planned Stop", "In Operation"],
     },
 
     legend: {
@@ -144,19 +144,19 @@ const AssetsCard = (props: UserProps) => {
         time.push(props.healthHistory[i].timestamp.substring(8, 10))
         break
       case 'inDowntime':
-        data.push([props.healthHistory[i].status, 4])
+        data.push([props.healthHistory[i].status, 3])
         time.push(props.healthHistory[i].timestamp.substring(8, 10))
         break
       case 'inAlert':
-        data.push([props.healthHistory[i].status, 3])
-        time.push(props.healthHistory[i].timestamp.substring(8, 10))
-        break;
-      case 'unplannedStop':
         data.push([props.healthHistory[i].status, 2])
         time.push(props.healthHistory[i].timestamp.substring(8, 10))
         break;
-      case 'plannedStop':
+      case 'unplannedStop':
         data.push([props.healthHistory[i].status, 1])
+        time.push(props.healthHistory[i].timestamp.substring(8, 10))
+        break;
+      case 'plannedStop':
+        data.push([props.healthHistory[i].status, 4])
         time.push(props.healthHistory[i].timestamp.substring(8, 10))
         break;
       default:

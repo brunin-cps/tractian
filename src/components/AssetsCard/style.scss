@@ -204,19 +204,19 @@
     .cardHistory {
       width: 97%;
       min-height: 3.5rem;
-      
+
       @include flex(column, center, center);
 
       @include mediaQueryMax(medium) {
-        @include flex(column, flex-start, center);
+        @include flex(column, center, center);
         margin: 1rem 1rem 1rem 1rem;
-        background-color: #F4F7FD;
       }
 
       .labelHistory {
         font-size: 18px;
         color: #727686;
         margin: 1rem 0rem 1rem 0rem;
+
         @include mediaQueryMax(medium) {
           margin: 1rem 0rem 0rem 1rem;
           color: #727686;
