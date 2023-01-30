@@ -1,0 +1,107 @@
+@import "../../styles/abstracts/_mixins.scss";
+
+
+.card {
+  display: flex;
+  flex-direction: column;
+  min-width: 30rem;
+  border: 0;
+  box-shadow: 0px 0px 10px 0px rgba(82, 63, 105, 0.1);
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(82, 63, 105, 0.1);
+  -moz-box-shadow: 0px 0px 10px 0px rgba(82, 63, 105, 0.1);
+  -ms-box-shadow: 0px 0px 10px 0px rgba(82, 63, 105, 0.1);
+
+  @include mediaQueryMax(large) {
+    min-width: 45rem;
+  }
+
+  @include mediaQueryMax(medium) {
+    min-width: 25rem;
+  }
+
+  @include mediaQueryMax(small) {
+    min-width: 17rem;
+  }
+
+  display: flex;
+  flex-direction: column;
+
+  word-wrap: break-word;
+  background-color: #ffffff;
+  background-clip: border-box;
+  border: 1px solid #e6e4e9;
+  border-radius: 8px;
+  margin: 2rem 0rem 0 0rem;
+
+  @include mediaQuery(large) {
+    margin: 2rem 1rem 0 1rem;
+  }
+
+
+}
+
+.card-body {
+  margin-top: 2rem;
+}
+
+.infoBox .topBox {
+  display: flex;
+  align-items: center;
+}
+
+.infoBox .topBox .imageBox {
+  @include flex-center(column);
+  background-color: #edf1fc;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+}
+
+.userImage {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.infoBox .topBox .mainInfo {
+  display: flex;
+  flex-direction: column;
+  margin-left: 1rem;
+}
+
+.infoBox .topBox .mainInfo .widget-49-pro-title {
+  color: #3c4142;
+  font-size: 14px;
+}
+
+.infoBox .topBox .mainInfo .widget-49-meeting-time {
+  color: #B1BAC5;
+  font-size: 13px;
+}
+
+.infoBox .extraUserInfo {
+  font-weight: 400;
+  font-size: 13px;
+  margin-top: .5rem;
+}
+
+.infoBox .extraUserInfo .idInfo {
+  display: flex;
+  color: #727686;
+  margin-left: .5rem;
+}
+
+.infoBox .buttonBox {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+
+  .btn {
+    text-transform: uppercase;
+    margin-left: .5rem;
+    width: fit-content;
+    height: 2rem;
+    @include flex(row, center, center)
+  }
+
+}

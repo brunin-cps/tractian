@@ -1,0 +1,46 @@
+@use './breakpoints' as *;
+@use "sass:map";
+
+@mixin mediaQuery($key) {
+  $size: map.get($breakpoitns, $key);
+
+  @media (min-width:$size) {
+    @content;
+  }
+}
+
+@mixin mediaQueryMax($key) {
+  $size: map.get($breakpoitns, $key);
+
+  @media (max-width:$size) {
+    @content;
+  }
+}
+
+@mixin flex-center($direction) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: $direction;
+}
+
+@mixin flex-start($direction) {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: $direction;
+}
+
+@mixin flex-end($direction) {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-direction: $direction;
+}
+
+@mixin flex($direction, $align, $justify) {
+  display: flex;
+  flex-direction: $direction;
+  align-items: $align;
+  justify-content: $justify;
+}

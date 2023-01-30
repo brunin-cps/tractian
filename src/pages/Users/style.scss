@@ -1,0 +1,72 @@
+@import "../../styles/abstracts/_mixins.scss";
+
+.usersContainer {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  min-height: 90vh;
+  background-color: white;
+  color: white;
+
+  .usersBox {
+    @include flex-center(column);
+    width: 80%;
+    min-height: 100%;
+    margin-bottom: 3vh;
+
+    .componentBox {
+      @include flex-center(row);
+      width: 100%;
+      background-color: #F4F7FD;
+      flex: 11;
+
+      .componentBody {
+        @include flex(row, flex-start, space-between);
+        flex-wrap: wrap;
+        width: 80%;
+        height: 100%;
+        margin-top: 1rem;
+        border-radius: 5px 5px 5px 5px;
+
+        @include mediaQueryMax(large) {
+          justify-content: center;
+        }
+      }
+    }
+  }
+}
+
+.fixedBtn {
+  text-transform: uppercase;
+  margin-left: .5rem;
+  width: fit-content;
+  height: 5rem;
+  width: 5rem;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  margin: 0 2rem 2rem 0;
+  background-color: #7EA16B;
+  border-radius: 50%;
+  cursor: pointer;
+
+  @include flex-center(row);
+
+  .userImageUser {
+    max-width: 60%;
+    max-height: 60%;
+    object-fit: contain;
+  }
+}
+
+.fixedBtn:hover {
+  background-color: green;
+}
+
+.footer {
+  width: 100%;
+  height: 7vh;
+  background-color: #015EF8;
+  @include flex-center(row);
+  color: white;
+}

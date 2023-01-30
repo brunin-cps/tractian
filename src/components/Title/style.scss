@@ -1,0 +1,28 @@
+@import "../../styles/abstracts/_mixins.scss";
+
+.componentTitle {
+  @include flex-start(row);
+  background-color: #1643A8;
+  align-items: center;
+  width: 100%;
+  height: 9rem;
+
+  @include mediaQueryMax(small) {
+    height: 10rem;
+  }
+
+  border-radius: 5px 5px 5px 5px;
+  margin-top: 1rem;
+
+  .titles {
+    margin-left: 5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    
+    @include mediaQueryMax(small) {
+      margin-left: 1rem;
+      margin-right: 1rem;
+      font-size: 13px;
+    }
+  }
+}

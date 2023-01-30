@@ -1,0 +1,9 @@
+@import "../../styles/abstracts/_mixins.scss";
+
+.footer {
+  width: 100%;
+  height: 7vh;
+  background-color: #015EF8;
+  @include flex-center(row);
+  color: white;
+}

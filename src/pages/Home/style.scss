@@ -1,0 +1,50 @@
+@import "../../styles/abstracts/_mixins.scss";
+
+.homeContainer {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  min-height: 80vh;
+  background-color: #015EF8;
+  color: white;
+
+  .homeBox {
+    width: 80%;
+    min-height: 100%;
+    @include flex-center(row);
+
+    .boxContent {
+      flex: 1;
+
+
+      .title {
+        font-size: 5rem;
+        font-weight: 900;
+
+        @include mediaQueryMax(small) {
+          font-size: 3rem;
+        }
+      }
+    }
+
+    .boxImg {
+      flex: 1;
+
+      @include mediaQueryMax(medium) {
+        display: none;
+      }
+
+      .imageHome {
+        max-width: 100%;
+        max-height: 100%;
+
+        @include mediaQuery(medium) {
+          background-image: url('../../assets/thumb-tractian.png');
+        }
+      }
+
+    }
+  }
+
+}
+

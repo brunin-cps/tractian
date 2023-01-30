@@ -1,0 +1,232 @@
+@import "../../styles/abstracts/_mixins.scss";
+
+.cardTasks {
+  width: 100%;
+  min-height: 20rem;
+  @include flex-center(column);
+
+  .rowTitleWorkorders {
+
+    box-shadow: rgba(0, 0, 0, 0.04) 0px 1px 2px 0px;
+    width: 100%;
+    height: 4rem;
+    @include flex-center(row);
+
+    .colTitle {
+      min-height: 4rem;
+      width: 75%;
+      @include flex(row, center, flex-start);
+
+      .titleBoxTask {
+        margin: 0 0 0 2rem;
+        min-height: 4rem;
+        color: #727686;
+        @include flex-center(row);
+
+        @include mediaQueryMax(small) {
+          margin-left: 1rem;
+        }
+      }
+
+      .removeMargin {
+        margin-left: 1rem !important;
+
+        @include mediaQueryMax(small) {
+          margin-right: 1.5rem;
+          margin-left: .5rem !important;
+        }
+      }
+    }
+
+    .colPriority {
+      min-height: 4rem;
+      width: 25%;
+      @include flex-center(row);
+
+      .priorityBoxTask {
+        width: 100%;
+        min-height: 3rem;
+        margin-right: 2rem;
+        padding: .5rem 1rem .5rem 1rem;
+        border-radius: 10px;
+        background-color: #FFC0CB;
+        color: black;
+        display: flex;
+
+        .textPriority {
+          flex-wrap: wrap;
+          padding: 0;
+          margin: 0;
+          width: 100%;
+          min-height: 2rem;
+          color: #727686;
+          @include flex-center(row);
+
+          @include mediaQueryMax(small) {
+            font-size: 12px;
+          }
+        }
+      }
+    }
+  }
+
+  .rowContentWorkorders {
+    width: 100%;
+    min-height: 16rem;
+    @include flex(row, flex-start, center);
+
+    @include mediaQueryMax(medium) {
+      @include flex-center(column);
+    }
+
+    .colTasks {
+      min-height: 16rem;
+      width: 75%;
+      @include flex-center(row);
+
+      @include mediaQueryMax(medium) {
+        width: 100%;
+      }
+
+      .boxTasks {
+        width: 100%;
+        min-height: 16rem;
+        background-color: #F4F7FD;
+        margin: 2rem;
+
+        .tasksContent {
+          min-height: 16rem;
+          background-color: #F4F7FD;
+          width: 100%;
+          word-wrap: break-word;
+          @include flex(column, flex-start, flex-start);
+
+          .descriptionTask {
+            margin: 1rem 0 1rem 2rem;
+
+            @include mediaQueryMax(large) {
+              margin: 1rem 0 1rem 1rem;
+            }
+
+            @include mediaQueryMax(medium) {
+              margin: 1rem 2rem 1rem 2rem;
+            }
+
+            @include mediaQueryMax(small) {
+              margin: 1rem 1rem 1rem 1rem;
+            }
+
+            color: #727686;
+          }
+
+          .taskBox {
+            width: 80%;
+            min-height: 2rem;
+            background-color: #fff7e0;
+
+            margin: 0rem 1rem 1rem 2rem;
+            @include flex(row, center, flex-start);
+
+            .taskText {
+              font-size: 14px;
+              margin-left: 1rem;
+              color: black;
+            }
+
+            .markTask {
+              text-decoration: line-through;
+              opacity: 0.5;
+            }
+          }
+        }
+      }
+
+    }
+
+    .colTasksResponsability {
+      min-height: 16rem;
+      width: 25%;
+      margin: 2rem 0 2rem 0;
+      @include flex(row, flex-start, center);
+
+      @include mediaQueryMax(medium) {
+        width: 100%;
+        margin: 0rem 0 2rem 0;
+      }
+
+      .taskResponsabily {
+        min-height: 16rem;
+        background-color: #F4F7FD;
+        width: 100%;
+        margin-right: 2rem;
+
+        @include mediaQueryMax(medium) {
+          margin: 0rem 2rem 2rem 2rem;
+        }
+
+        .titleTaskResponsabily {
+          margin: 1rem 0 .5rem 2rem;
+
+          @include mediaQueryMax(large) {
+            margin: 1rem 0 .5rem 1rem;
+          }
+
+          @include mediaQueryMax(medium) {
+            margin: 1rem 0 .5rem 3rem;
+          }
+
+          @include mediaQueryMax(small) {
+            margin: 1rem 0 .5rem 1rem;
+          }
+
+          color: black;
+        }
+
+        .nameUser {
+          margin: 0 0 0.3rem 3rem;
+          font-size: 13px;
+          color: #727686;
+
+          @include mediaQueryMax(medium) {
+            margin: .2rem 0 0 4rem;
+          }
+        }
+
+        .buttonAddResp {
+          width: 10rem;
+          height: 2.5rem;
+          background-color: transparent;
+          border-color: green;
+          color: green;
+          margin: 1rem 0 1rem 2rem;
+
+          @include mediaQueryMax(large) {
+            margin: 1rem 0 1rem 1rem;
+          }
+
+          @include mediaQueryMax(medium) {
+            margin: 1rem 0 1rem 3rem;
+          }
+
+          @include mediaQueryMax(small) {
+            margin: 1rem 0 1rem 1rem;
+          }
+        }
+
+        .buttonAddResp:hover {
+          background-color: green;
+          color: white;
+        }
+      }
+    }
+  }
+}
+
+.opacityCardTasks {
+  opacity: 0.5;
+}
+
+.invisibleCompleted {
+  visibility: hidden;
+
+}
